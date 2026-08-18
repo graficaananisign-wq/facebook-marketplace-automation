@@ -1,0 +1,136 @@
+{
+  "empresa": {
+    "nome": "Fênix Digital",
+    "site": "sitefenixdigital.online",
+    "whatsapp": "91981305395",
+    "localizacao": "Brasil - Atendimento 100% Online"
+  },
+  "servicos": [
+    {
+      "id": "site-institucional",
+      "nome": "Criação de Sites Profissionais",
+      "preco": "599",
+      "prazo": "até 2 dias",
+      "inclui": [
+        "Site profissional responsivo",
+        "Design moderno e elegante",
+        "Configuração de domínio e hospedagem",
+        "Certificado SSL (HTTPS)",
+        "Otimizado para Google (SEO)",
+        "Formulário de contato",
+        "Redes sociais integradas"
+      ],
+      "diferenciais": [
+        "Portfólio com +50 sites entregues",
+        "Suporte pós-entrega por 30 dias",
+        "100% online - Atendimento worldwide",
+        "Pagamento facilitado",
+        "Revisão gratuita"
+      ]
+    },
+    {
+      "id": "landing-page",
+      "nome": "Landing Page de Alta Conversão",
+      "preco": "399",
+      "prazo": "até 2 dias",
+      "inclui": [
+        "Landing page otimizada para conversão",
+        "Design persuasivo",
+        "Formulário de captura de leads",
+        "Integração com WhatsApp",
+        "Google Analytics configurado",
+        "A/B testing pronto",
+        "Velocidade otimizada"
+      ],
+      "diferenciais": [
+        "Especialista em conversão",
+        "Cases de sucesso comprovados",
+        "Suporte via WhatsApp",
+        "Garantia de resultado",
+        "Atualização gratuita por 15 dias"
+      ]
+    },
+    {
+      "id": "loja-virtual",
+      "nome": "Loja Virtual Completa",
+      "preco": "1299",
+      "prazo": "até 2 dias",
+      "inclui": [
+        "Loja virtual com até 100 produtos",
+        "Sistema de pagamento integrado",
+        "Cálculo de frete automático",
+        "Painel administrativo completo",
+        "Certificado SSL (HTTPS)",
+        "Layout responsivo",
+        "Integração com redes sociais"
+      ],
+      "diferenciais": [
+        "Especialista em e-commerce",
+        "Integração com gateways de pagamento",
+        "Suporte técnico por 60 dias",
+        "Treinamento incluído",
+        "Relatórios de vendas"
+      ]
+    },
+    {
+      "id": "funil-vendas",
+      "nome": "Funil de Vendas Completo",
+      "preco": "899",
+      "prazo": "até 2 dias",
+      "inclui": [
+        "Página de vendas persuasiva",
+        "Sequência de e-mails automática",
+        "Página de obrigado",
+        "Integração com WhatsApp",
+        "Rastreamento de conversões",
+        "Layout mobile-first",
+        "Copywriting profissional"
+      ],
+      "diferenciais": [
+        "Especialista em marketing digital",
+        "Focado em ROI",
+        "Suporte por 30 dias",
+        "Ajustes gratuitos",
+        "Estratégia inclusa"
+      ]
+    },
+    {
+      "id": "site-portfolio",
+      "nome": "Site Portfólio Profissional",
+      "preco": "499",
+      "prazo": "até 2 dias",
+      "inclui": [
+        "Portfólio com galeria de imagens",
+        "Biografia profissional",
+        "Formulário de contato",
+        "Layout minimalista e elegante",
+        "Otimizado para celular",
+        "Hospedagem incluída por 1 ano",
+        "Domínio personalizado"
+      ],
+      "diferenciais": [
+        "Design exclusivo para seu nicho",
+        "Carregamento ultrarrápido",
+        "Suporte por 30 dias",
+        "Atualizações inclusas",
+        "SEO básico incluído"
+      ]
+    }
+  ],
+  "variacoes": {
+    "titulos": [
+      "{servico} - Profissional e Rápido",
+      "{servico} - A Partir de R${preco}",
+      "{servico} - Entrega em {prazo}",
+      "Precisa de {servico}? Chame agora!",
+      "{servico} - Qualidade Garantida"
+    ],
+    "urgencia": [
+      "🔥 VAGAS LIMITADAS!",
+      "⚡ PROMOÇÃO ESPECIAL!",
+      "🎯 OFERTA IMPERDÍVEL!",
+      "📦 ÚLTIMAS VAGAS!",
+      "🔥 GARANTA JÁ O SEU!"
+    ]
+  }
+}

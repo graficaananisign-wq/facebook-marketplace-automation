@@ -1,0 +1,74 @@
+
+# Anúncio 1: Criação de Sites Profissionais
+# Título: Criação de Sites Profissionais - Qualidade Garantida
+# Arquivo: C:\Users\Neto Farias\.config\opencode\skills\facebook-marketplace-automation\anuncios\anuncio-1.txt
+# 
+# INSTRUÇÕES:
+# 1. Abra: https://www.facebook.com/marketplace/create
+# 2. Cole o título: Criação de Sites Profissionais - Qualidade Garantida
+# 3. Abra o arquivo: C:\Users\Neto Farias\.config\opencode\skills\facebook-marketplace-automation\anuncios\anuncio-1.txt
+# 4. Copie a descrição
+# 5. Cole no Facebook
+# 6. Adicione preço: R$599
+# 7. Adicione fotos
+# 8. Publique!
+
+
+# Anúncio 2: Landing Page de Alta Conversão
+# Título: Precisa de Landing Page de Alta Conversão? Chame agora!
+# Arquivo: C:\Users\Neto Farias\.config\opencode\skills\facebook-marketplace-automation\anuncios\anuncio-2.txt
+# 
+# INSTRUÇÕES:
+# 1. Abra: https://www.facebook.com/marketplace/create
+# 2. Cole o título: Precisa de Landing Page de Alta Conversão? Chame agora!
+# 3. Abra o arquivo: C:\Users\Neto Farias\.config\opencode\skills\facebook-marketplace-automation\anuncios\anuncio-2.txt
+# 4. Copie a descrição
+# 5. Cole no Facebook
+# 6. Adicione preço: R$399
+# 7. Adicione fotos
+# 8. Publique!
+
+
+# Anúncio 3: Loja Virtual Completa
+# Título: 📦 ÚLTIMAS VAGAS! Loja Virtual Completa - Profissional e Rápido
+# Arquivo: C:\Users\Neto Farias\.config\opencode\skills\facebook-marketplace-automation\anuncios\anuncio-3.txt
+# 
+# INSTRUÇÕES:
+# 1. Abra: https://www.facebook.com/marketplace/create
+# 2. Cole o título: 📦 ÚLTIMAS VAGAS! Loja Virtual Completa - Profissional e Rápido
+# 3. Abra o arquivo: C:\Users\Neto Farias\.config\opencode\skills\facebook-marketplace-automation\anuncios\anuncio-3.txt
+# 4. Copie a descrição
+# 5. Cole no Facebook
+# 6. Adicione preço: R$1299
+# 7. Adicione fotos
+# 8. Publique!
+
+
+# Anúncio 4: Funil de Vendas Completo
+# Título: ⚡ PROMOÇÃO ESPECIAL! Precisa de Funil de Vendas Completo? Chame agora!
+# Arquivo: C:\Users\Neto Farias\.config\opencode\skills\facebook-marketplace-automation\anuncios\anuncio-4.txt
+# 
+# INSTRUÇÕES:
+# 1. Abra: https://www.facebook.com/marketplace/create
+# 2. Cole o título: ⚡ PROMOÇÃO ESPECIAL! Precisa de Funil de Vendas Completo? Chame agora!
+# 3. Abra o arquivo: C:\Users\Neto Farias\.config\opencode\skills\facebook-marketplace-automation\anuncios\anuncio-4.txt
+# 4. Copie a descrição
+# 5. Cole no Facebook
+# 6. Adicione preço: R$899
+# 7. Adicione fotos
+# 8. Publique!
+
+
+# Anúncio 5: Site Portfólio Profissional
+# Título: Site Portfólio Profissional - Entrega em até 2 dias
+# Arquivo: C:\Users\Neto Farias\.config\opencode\skills\facebook-marketplace-automation\anuncios\anuncio-5.txt
+# 
+# INSTRUÇÕES:
+# 1. Abra: https://www.facebook.com/marketplace/create
+# 2. Cole o título: Site Portfólio Profissional - Entrega em até 2 dias
+# 3. Abra o arquivo: C:\Users\Neto Farias\.config\opencode\skills\facebook-marketplace-automation\anuncios\anuncio-5.txt
+# 4. Copie a descrição
+# 5. Cole no Facebook
+# 6. Adicione preço: R$499
+# 7. Adicione fotos
+# 8. Publique!
