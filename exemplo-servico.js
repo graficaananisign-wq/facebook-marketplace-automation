@@ -20,7 +20,7 @@ const servicoSite = {
   name: 'Criação de Sites Profissionais',
   category: 'services',
   price: '599',
-  deliveryTime: '5-7 dias úteis',
+  deliveryTime: 'até 2 dias',
   website: 'sitefenixdigital.online',
   whatsapp: '91981305395',
   includes: [
@@ -48,7 +48,7 @@ const servicoLanding = {
   name: 'Landing Page de Alta Conversão',
   category: 'services',
   price: '399',
-  deliveryTime: '3-5 dias úteis',
+  deliveryTime: 'até 2 dias',
   website: 'sitefenixdigital.online',
   whatsapp: '91981305395',
   includes: [
@@ -76,7 +76,7 @@ const servicoLoja = {
   name: 'Loja Virtual Completa',
   category: 'services',
   price: '1299',
-  deliveryTime: '10-15 dias úteis',
+  deliveryTime: 'até 2 dias',
   website: 'sitefenixdigital.online',
   whatsapp: '91981305395',
   includes: [

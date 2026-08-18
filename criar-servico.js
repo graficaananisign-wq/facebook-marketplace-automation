@@ -37,7 +37,7 @@ const questions = [
   {
     name: 'deliveryTime',
     question: '⏳ Prazo de entrega (ex: 5-7 dias úteis): ',
-    default: '5-7 dias úteis'
+    default: 'até 2 dias'
   },
   {
     name: 'website',

@@ -129,7 +129,7 @@ ${data.features ? data.features.map(f => `• ${f}`).join('\n') : '• Ótima lo
 ✅ O QUE ESTÁ INCLUSO:
 ${data.includes ? data.includes.map(i => `• ${i}`).join('\n') : '• Site profissional responsivo\n• Design moderno\n• Configuração completa'}
 
-⏳ PRAZO DE ENTREGA: ${data.deliveryTime || '5-7 dias úteis'}
+⏳ PRAZO DE ENTREGA: ${data.deliveryTime || 'até 2 dias'}
 
 💰 A PARTIR DE: R$${data.price || '599'}
 
