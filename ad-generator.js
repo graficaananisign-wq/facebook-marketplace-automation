@@ -118,6 +118,29 @@ ${data.features ? data.features.map(f => `• ${f}`).join('\n') : '• Ótima lo
 
 📞 Agende sua visita!
           `.trim()
+        },
+        services: {
+          titlePrefix: ['Profissional', 'Especialista', 'Experto em', 'Criador de'],
+          conditions: ['Disponível', 'Vagas limitadas', 'Aceitando projetos'],
+          keywords: ['sites profissionais', 'landing pages', 'marketing digital', 'presença online'],
+          descriptionStructure: (data) => `
+🌐 ${data.name}
+
+✅ O QUE ESTÁ INCLUSO:
+${data.includes ? data.includes.map(i => `• ${i}`).join('\n') : '• Site profissional responsivo\n• Design moderno\n• Configuração completa'}
+
+⏳ PRAZO DE ENTREGA: ${data.deliveryTime || '5-7 dias úteis'}
+
+💰 A PARTIR DE: R$${data.price || '599'}
+
+🎯 POR QUE ME ESCOLHER:
+${data.features ? data.features.map(f => `• ${f}`).join('\n') : '• Portfólio comprovado\n• Suporte pós-entrega\n• 100% online'}
+
+🌐 Acesse: ${data.website || 'sitefenixdigital.online'}
+
+📱 Para resposta rápida, me chame no WhatsApp:
+https://wa.me/55${data.whatsapp || '91981305395'}
+          `.trim()
         }
       },
       // Templates de urgência
@@ -155,6 +178,8 @@ ${data.features ? data.features.map(f => `• ${f}`).join('\n') : '• Ótima lo
       title = `${brand || ''} ${model || ''} ${year || ''} ${condition || ''}`.trim();
     } else if (category === 'electronics') {
       title = `${brand || ''} ${name} ${condition || ''}`.trim();
+    } else if (category === 'services') {
+      title = `${name}`.trim();
     } else {
       title = `${name} ${condition || ''}`.trim();
     }
@@ -190,8 +215,8 @@ ${product.description || ''}
       `.trim();
     }
     
-    // Adicionar WhatsApp se configurado
-    if (this.whatsapp) {
+    // Adicionar WhatsApp se configurado (e não estiver já na descrição)
+    if (this.whatsapp && !description.includes('wa.me')) {
       description += `\n\n📱 Para resposta rápida, me chame no WhatsApp:\nhttps://wa.me/55${this.whatsapp}`;
     }
     
