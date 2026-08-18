@@ -72,6 +72,11 @@ const questions = [
     question: '🔥 Anúncio urgente? (s/n): ',
     options: ['s', 'n'],
     default: 'n'
+  },
+  {
+    name: 'whatsapp',
+    question: '📱 WhatsApp para contato (ex: 91981305395): ',
+    required: false
   }
 ];
 
@@ -137,6 +142,11 @@ async function main() {
     answers[q.name] = answer;
   }
   
+  // Criar generator com WhatsApp
+  const generatorWithWhatsapp = new AdGenerator({
+    whatsapp: answers.whatsapp || null
+  });
+  
   // Processar respostas
   const productData = {
     name: answers.name,
@@ -156,7 +166,7 @@ async function main() {
   
   try {
     // Gerar anúncio
-    const result = await generator.createAndPublish(productData);
+    const result = await generatorWithWhatsapp.createAndPublish(productData);
     
     console.log('\n' + '='.repeat(60));
     console.log('✅ ANÚNCIO CRIADO COM SUCESSO!');

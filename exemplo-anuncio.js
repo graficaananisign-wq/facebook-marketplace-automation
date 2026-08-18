@@ -6,7 +6,10 @@
 
 const AdGenerator = require('./ad-generator');
 
-const generator = new AdGenerator();
+// Criar generator com WhatsApp (adicione seu número)
+const generator = new AdGenerator({
+  whatsapp: '91981305395' // Seu número com DDD
+});
 
 // Exemplo 1: iPhone
 const iphone = {

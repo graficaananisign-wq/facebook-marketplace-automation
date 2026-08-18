@@ -82,7 +82,10 @@ O assistente irá:
 ```javascript
 const AdGenerator = require('./ad-generator');
 
-const generator = new AdGenerator();
+// Criar generator com WhatsApp (opcional)
+const generator = new AdGenerator({
+  whatsapp: '91981305395' // Seu número com DDD
+});
 
 const produto = {
   name: 'iPhone 13 Pro Max 256GB',
@@ -102,6 +105,27 @@ console.log('Título:', result.ad.title);
 console.log('Descrição:', result.ad.description);
 console.log('Preço sugerido:', result.ad.suggestedPrice);
 ```
+
+#### Integração com WhatsApp
+
+O sistema pode incluir automaticamente um link do WhatsApp na descrição do anúncio:
+
+```javascript
+// Ao criar o generator
+const generator = new AdGenerator({
+  whatsapp: '91981305395' // Apenas números com DDD
+});
+
+// O link será adicionado automaticamente:
+// 📱 Para resposta rápida, me chame no WhatsApp:
+// https://wa.me/5591981305395
+```
+
+**Como funciona:**
+- O botão "Mensagem" do Marketplace sempre vai para o Messenger
+- Mas o link do WhatsApp fica na descrição
+- Pessoa clica no link e vai direto para seu WhatsApp
+- Funciona em qualquer celular com WhatsApp instalado
 
 #### O que o gerador faz:
 

@@ -11,9 +11,10 @@ const path = require('path');
 const { exec } = require('child_process');
 
 class AdGenerator {
-  constructor() {
+  constructor(config = {}) {
     this.automation = new MarketplaceAutomation();
     this.templates = this.loadTemplates();
+    this.whatsapp = config.whatsapp || null;
   }
 
   loadTemplates() {
@@ -170,13 +171,13 @@ ${data.features ? data.features.map(f => `• ${f}`).join('\n') : '• Ótima lo
   generateDescription(product) {
     const category = product.category || 'electronics';
     const template = this.templates.categories[category];
+    let description = '';
     
     if (template && template.descriptionStructure) {
-      return template.descriptionStructure(product);
-    }
-    
-    // Descrição genérica
-    return `
+      description = template.descriptionStructure(product);
+    } else {
+      // Descrição genérica
+      description = `
 ${product.name}
 
 ✅ CONDIÇÃO: ${product.condition || 'Semi-novo'}
@@ -186,7 +187,15 @@ ${product.name}
 ${product.description || ''}
 
 📞 Me chame para mais informações!
-    `.trim();
+      `.trim();
+    }
+    
+    // Adicionar WhatsApp se configurado
+    if (this.whatsapp) {
+      description += `\n\n📱 Para resposta rápida, me chame no WhatsApp:\nhttps://wa.me/55${this.whatsapp}`;
+    }
+    
+    return description;
   }
 
   // Calcular preço competitivo baseado no mercado

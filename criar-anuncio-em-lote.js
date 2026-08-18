@@ -16,7 +16,7 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-const generator = new AdGenerator();
+let generator = new AdGenerator();
 
 // Variações automáticas
 const variations = {
@@ -299,6 +299,12 @@ async function main() {
   
   const featuresStr = await askQuestion('⭐ Características (separadas por vírgula): ');
   baseProduct.features = featuresStr ? featuresStr.split(',').map(f => f.trim()) : [];
+  
+  // Perguntar WhatsApp
+  const whatsapp = await askQuestion('📱 WhatsApp para contato (ex: 91981305395): ');
+  
+  // Criar generator com WhatsApp
+  generator = new AdGenerator({ whatsapp: whatsapp || null });
   
   // Gerar variações
   console.log('\n🔄 Gerando variações automáticas...');
