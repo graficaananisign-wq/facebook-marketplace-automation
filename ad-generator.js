@@ -26,7 +26,7 @@ class AdGenerator {
           conditions: ['Novo na caixa', 'Semi-novo', 'Usado - Como novo', 'Usado - Bom estado', 'Com defeito'],
           keywords: ['frete grátis', 'entrega rápida', 'garantia', 'acessórios originais'],
           descriptionStructure: (data) => `
-📱 ${data.title}
+📱 ${data.name}
 
 ✅ CONDIÇÃO: ${data.condition}
 📦 O QUE VEM: ${data.includes || 'Produto completo com acessórios'}
@@ -46,11 +46,11 @@ ${data.features ? data.features.map(f => `• ${f}`).join('\n') : '• Produto e
           titleSuffix: ['Aceito troca', 'Financiamento disponível', 'IPVA pago', ' Documentos ok'],
           conditions: ['Novo', 'Semi-novo', 'Usado'],
           descriptionStructure: (data) => `
-🚗 ${data.title}
+🚗 ${data.name}
 
 📋 INFORMAÇÕES DO VEÍCULO:
-• Marca/Modelo: ${data.brand} ${data.model}
-• Ano: ${data.year}
+• Marca/Modelo: ${data.brand || ''} ${data.model || ''}
+• Ano: ${data.year || 'A informar'}
 • Quilometragem: ${data.mileage || 'A combinar'}
 • Cambio: ${data.transmission || 'Manual'}
 • Combustível: ${data.fuel || 'Flex'}
@@ -75,7 +75,7 @@ ${data.features ? data.features.map(f => `• ${f}`).join('\n') : '• Documenta
           titlePrefix: ['Vendo', 'Ótimo', 'Elegante', 'Moderno', 'Clássico'],
           conditions: ['Novo', 'Semi-novo', 'Usado - Bom estado'],
           descriptionStructure: (data) => `
-🪑 ${data.title}
+🪑 ${data.name}
 
 ✨ CONDIÇÃO: ${data.condition}
 📐 DIMENSÕES: ${data.dimensions || 'A combinar no chat'}
@@ -97,7 +97,7 @@ ${data.includes ? data.includes.map(i => `• ${i}`).join('\n') : '• Peça pri
           titleSuffix: ['Área nobre', 'Próx. metrô', 'Vagas inclusas', 'Mobiliado'],
           conditions: ['Novo', 'Usado'],
           descriptionStructure: (data) => `
-🏠 ${data.title}
+🏠 ${data.name}
 
 📋 DADOS DO IMÓVEL:
 • Tipo: ${data.type || 'Apartamento'}
