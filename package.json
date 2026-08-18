@@ -1,0 +1,28 @@
+{
+  "name": "facebook-marketplace-automation",
+  "version": "1.0.0",
+  "description": "Automação completa do Facebook Marketplace usando Apify",
+  "main": "marketplace-automation.js",
+  "scripts": {
+    "start": "node marketplace-automation.js",
+    "monitor": "node monitor-concorrentes.js",
+    "ofertas": "node alerta-precos-baixos.js",
+    "analise": "node analise-mercado.js",
+    "anuncio": "node criar-anuncio.js"
+  },
+  "keywords": [
+    "facebook",
+    "marketplace",
+    "apify",
+    "automation",
+    "scraping"
+  ],
+  "author": "OpenCode AI",
+  "license": "MIT",
+  "dependencies": {
+    "apify-client": "^2.9.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
