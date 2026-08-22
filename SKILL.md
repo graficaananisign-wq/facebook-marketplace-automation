@@ -13,10 +13,13 @@ Skill completo para automatizar tarefas no Facebook Marketplace usando a platafo
 
 | Módulo | Descrição |
 |--------|-----------|
-| **Monitor de Concorrentes** | Rastreia preços e anúncios de concorrentes em tempo real |
+| **Minerador de Ofertas** | Minera anúncios da Meta Ads Library via Playwright |
+| **Gerador Inteligente** | Gera anúncios baseados em padrões vencedores |
+| **Workflow Semi-Automático** | Gera anúncios em lote e facilita publicação |
+| **Monitor de Concorrentes** | Rastreia preços e anúncios de concorrentes |
 | **Alerta de Preços Baixos** | Notifica quando surgir produto abaixo do mercado |
 | **Análise de Mercado** | Coleta dados de preços, tendências e demanda |
-| **Gerador de Anúncios** | Gera conteúdo otimizado e abre Marketplace para publicar |
+| **Gerador de Anúncios** | Gera conteúdo otimizado e abre Marketplace |
 | **Multi-Plataforma** | Posta em Marketplace + OLX + Mercado Livre |
 
 ## 🔧 Pré-requisitos
@@ -251,7 +254,127 @@ const resultados = await generator.createBatch(variacoes);
 3. Copie cada anúncio e cole no Facebook Marketplace
 4. Repita para os 10 anúncios
 
-### 3. Monitor de Concorrentes
+### 3. Minerador de Ofertas (Meta Ads Library)
+
+Minera anúncios da Meta Ads Library via Playwright para encontrar ofertas vencedoras no nicho de serviços digitais.
+
+#### Como funciona
+
+1. **Busca** anúncios ativos na Meta Ads Library para cada palavra-chave
+2. **Extrai** dados via DOM: anunciante, texto, preço, landing page, dias no ar
+3. **Pontua** cada anúncio de 0-100 usando rubrica fixa
+4. **Salva** apenas ofertas qualificadas (nota >= 50)
+
+#### Palavras-chave monitoradas
+
+- criação de sites profissionais
+- landing page profissional
+- desenvolvimento de sites
+- criar site agora
+- site profissional barato
+- página de vendas
+- funil de vendas completo
+- loja virtual pronta
+- site institucional
+- criação de landing page
+
+#### Uso
+
+```bash
+# Executar mineração
+npm run minerar
+
+# Ou diretamente
+node minerador-ofertas.js
+```
+
+#### Rubrica de Pontuação (0-100)
+
+| Critério | Pontos | Descrição |
+|----------|--------|-----------|
+| Base | 20 | Pontuação inicial |
+| Dias no ar >= 90 | +30 | Muito estável |
+| Dias no ar >= 60 | +25 | Estável |
+| Dias no ar >= 30 | +20 | Moderado |
+| Dias no ar >= 14 | +10 | Novo mas ativo |
+| Tem preço | +15 | Preço definido no anúncio |
+| Garantia | +10 | Oferece garantia |
+| Entrega rápida | +10 | Menciona entrega ou prazo |
+| Serviço online | +5 | Menciona online/digital |
+| Inclui material | +5 | PDF, ebook, etc. |
+| Acesso vitalício | +5 | Acesso vitalício |
+
+#### Saída
+
+- JSON: `data/minerados/ads-library-[DATA].json`
+- CSV: `data/minerados/radar-servicos-[DATA].csv`
+
+### 4. Gerador Inteligente de Anúncios
+
+Gera anúncios automaticamente baseado nos padrões encontrados na mineração.
+
+#### Uso
+
+```bash
+# Gerar anúncios inteligentes
+node gerar-anuncios-inteligentes.js
+```
+
+#### O que faz
+
+1. **Carrega** dados da mineração mais recente
+2. **Analisa** padrões vencedores (hooks, preços, garantias, CTAs)
+3. **Gera** anúncios inspirados nos melhores exemplos
+4. **Salva** em `anuncios-inteligentes/`
+
+#### Serviços gerados
+
+| Tipo | Preço Padrão |
+|------|--------------|
+| Site Profissional | R$ 599 |
+| Landing Page | R$ 399 |
+| Loja Virtual | R$ 1.299 |
+| Funil de Vendas | R$ 899 |
+
+### 5. Workflow Semi-Automático
+
+Gera múltiplos anúncios com variações e facilita a publicação manual no Marketplace.
+
+#### Uso
+
+```bash
+# Gerar anúncios para o dia
+npm run workflow
+
+# Listar e publicar anúncios
+node publicar.js
+```
+
+#### Como funciona
+
+1. **Gera** anúncios com variações de título e descrição
+2. **Salva** cada anúncio em arquivo individual
+3. **Abre** Chrome e copia para área de transferência
+4. **Usuário** cola no Facebook Marketplace
+
+#### Configuração
+
+Edite `config-servicos.json` para personalizar:
+
+```json
+{
+  "services": [
+    {
+      "type": "site",
+      "name": "Site Profissional",
+      "basePrice": 599,
+      "category": "servicos"
+    }
+  ]
+}
+```
+
+### 6. Monitor de Concorrentes
 
 Rastreia anúncios de concorrentes e detecta mudanças de preço.
 
