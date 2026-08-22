@@ -8,7 +8,10 @@
     "monitor": "node monitor-concorrentes.js",
     "ofertas": "node alerta-precos-baixos.js",
     "analise": "node analise-mercado.js",
-    "anuncio": "node criar-anuncio.js"
+    "anuncio": "node criar-anuncio.js",
+    "minerar": "node minerador-ofertas.js",
+    "relatorio": "node relatorio-ofertas.js",
+    "workflow": "node workflow.js"
   },
   "keywords": [
     "facebook",

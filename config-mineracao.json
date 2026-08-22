@@ -1,0 +1,33 @@
+{
+  "api": {
+    "provider": "parse",
+    "baseUrl": "https://api.parse.bot/v1",
+    "apiKey": "SUA_API_KEY_PARSE_AQUI",
+    "creditsFree": 200,
+    "rateLimit": "5 req/min"
+  },
+  "palavrasChave": [
+    "criação de sites",
+    "landing page profissional",
+    "desenvolvimento web",
+    "site paranegócios",
+    "fazer site barato",
+    "criar site"
+  ],
+  "filtros": {
+    "pais": "BR",
+    "status": "ACTIVE",
+    "diasMinimos": 30,
+    "limitePorBusca": 50
+  },
+  "scoring": {
+    "pesoTempo": 40,
+    "pesoImpressoes": 30,
+    "pesoCriativo": 20,
+    "pesoReplicabilidade": 10
+  },
+  "output": {
+    "pastaMinerados": "data/minerados",
+    "pastaRelatorios": "data/relatorios"
+  }
+}
